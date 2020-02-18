@@ -10276,7 +10276,6 @@ a.close.disabled {
   padding-left: 0;
   margin-right: 15%;
   margin-left: 15%;
-  margin-top: 30px;
   list-style: none;
 }
 .carousel-indicators li {
@@ -21863,7 +21862,7 @@ section {
   text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
 }
 .carousel .carousel-indicators {
-  bottom: -40px;
+  bottom: -60px;
 }
 .carousel-indicators li,
 .carousel-indicators li.active {

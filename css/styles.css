@@ -21812,8 +21812,8 @@ section {
   float: none !important;
 }
 .carousel {
-  margin: 50px auto;
-  padding: 0 70px;
+  margin: 0 auto;
+  padding: 0px;
 }
 .carousel .item {
   color: #999;

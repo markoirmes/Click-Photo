@@ -10232,7 +10232,7 @@ a.close.disabled {
 .carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
-  color: #fff;
+  color: #414142;
   text-decoration: none;
   outline: 0;
   opacity: 0.9;
@@ -21879,4 +21879,8 @@ section {
 .carousel-indicators li.active {
   background: #555;
   box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.svg-inline--fa.fa-w-8 {
+  width:1em!important;
 }

@@ -54,7 +54,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Metropolis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  --font-family-sans-serif: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -87,7 +87,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Metropolis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
@@ -9844,7 +9844,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Metropolis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
@@ -9959,7 +9959,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Metropolis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
@@ -18364,110 +18364,110 @@ body {
 }
 
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-Thin.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-Thin.otf");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-ThinItalic.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-ThinItalic.otf");
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-ExtraLight.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-ExtraLight.otf");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-ExtraLightItalic.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-ExtraLightItalic.otf");
   font-weight: 200;
   font-style: italic;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-Light.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-Light.otf");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-LightItalic.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-LightItalic.otf");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-Regular.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-Regular.otf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-RegularItalic.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-RegularItalic.otf");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-Medium.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-Medium.otf");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-MediumItalic.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-MediumItalic.otf");
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-SemiBold.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-SemiBold.otf");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-SemiBoldItalic.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-SemiBoldItalic.otf");
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-Bold.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-Bold.otf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-BoldItalic.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-BoldItalic.otf");
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-ExtraBold.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-ExtraBold.otf");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-ExtraBoldItalic.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-ExtraBoldItalic.otf");
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-Black.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-Black.otf");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/metropolis/Metropolis-BlackItalic.otf");
+  font-family: "Varela Round";
+  src: url("../assets/fonts/Varela Round/Varela Round-BlackItalic.otf");
   font-weight: 800;
   font-style: italic;
 }

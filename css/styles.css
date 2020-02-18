@@ -10290,8 +10290,8 @@ a.close.disabled {
   cursor: pointer;
   background-color: #404143;
   background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  /* border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; */
   opacity: 0.5;
   -webkit-transition: opacity 0.6s ease;
   transition: opacity 0.6s ease;

@@ -21884,3 +21884,14 @@ section {
 .svg-inline--fa.fa-w-8 {
   width: 1em !important;
 }
+
+.btn-teal-outline {
+  color: #1f2d41;
+  background-color: transparent;
+  border-color: #00ba94;
+}
+
+.btn-teal:focus,
+.btn-teal.focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 196, 164, 0.5);
+}

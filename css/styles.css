@@ -3894,13 +3894,13 @@ fieldset:disabled a.btn {
 .btn-teal:hover {
   color: #fff;
   background-color: #52afab;
-  border-color: #00876b;
+  border-color: #52afab;
 }
 .btn-teal:focus,
 .btn-teal.focus {
   color: #fff;
   background-color: #52afab;
-  border-color: #00876b;
+  border-color: #52afab;
   box-shadow: 0 0 0 0.2rem rgba(38, 196, 164, 0.5);
 }
 .btn-teal.disabled,
@@ -3913,7 +3913,7 @@ fieldset:disabled a.btn {
 .btn-teal:not(:disabled):not(.disabled).active,
 .show > .btn-teal.dropdown-toggle {
   color: #fff;
-  background-color: #00876b;
+  background-color: #52afab;
   border-color: #007a61;
 }
 .btn-teal:not(:disabled):not(.disabled):active:focus,
@@ -7921,7 +7921,7 @@ a.badge-green.focus {
 a.badge-teal:hover,
 a.badge-teal:focus {
   color: #fff;
-  background-color: #00876b;
+  background-color: #52afab;
 }
 a.badge-teal:focus,
 a.badge-teal.focus {
@@ -10571,7 +10571,7 @@ a.bg-teal:hover,
 a.bg-teal:focus,
 button.bg-teal:hover,
 button.bg-teal:focus {
-  background-color: #00876b !important;
+  background-color: #52afab !important;
 }
 
 .bg-cyan {

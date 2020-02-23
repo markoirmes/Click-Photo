@@ -21887,6 +21887,18 @@ section {
   width: 1em !important;
 }
 
+.dropdown-menu .dropdown-item:first-child {
+  border-top-right-radius: 0.35rem;
+  border-top-left-radius: 0.35rem;
+}
+
+.dropdown-menu .dropdown-item:last-child {
+  border-bottom-right-radius: 0.35rem;
+  border-bottom-left-radius: 0.35rem;
+}
+
+/* MEDIA QUERIES */
+
 @media only screen and (max-width: 767px) {
   .mobile-text-center {
     text-align: center;

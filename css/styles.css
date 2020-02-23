@@ -669,6 +669,11 @@ pre code {
   margin-right: -1.5rem;*/
 }
 
+.row-margin {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;

@@ -66,10 +66,12 @@ function addClassToCenovnik(cenovnikWidth) {
     document.getElementById("cenovnik").classList.add("py-10");
     document.getElementById("cenovnikMargin").classList.remove("my-10");
     document.getElementById("cenovnikMargin").classList.add("mb-10");
+    document.getElementById("sectionCenovnik").classList.remove("pt-10");
   } else {
     document.getElementById("cenovnik").classList.remove("py-10");
     document.getElementById("cenovnikMargin").classList.add("my-10");
     document.getElementById("cenovnikMargin").classList.remove("mb-10");
+    document.getElementById("sectionCenovnik").classList.add("pt-10");
   }
 }
 

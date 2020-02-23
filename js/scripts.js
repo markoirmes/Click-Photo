@@ -85,11 +85,23 @@ function pullTitleUp(zastoWidth) {
   if (zastoWidth.matches) {
     // If media query matches
     document.getElementById("zastoCenter").prepend(document.getElementById("zastoBasMi"));
+    document.getElementById("zastoBasMi").classList.add("mobile-text-center");
+    document.getElementById("zastoImg").classList.add("col-md-6");
+    document.getElementById("zastoImg").classList.remove("col-md-9");
+    document.getElementById("zastoImg").classList.remove("col-lg-6");
+    document.getElementById("zastoImg").classList.add("order-md-0");
+    document.getElementById("zastoRight").classList.add("order-md-1");
   } else {
     document.getElementById("zastoRight").prepend(document.getElementById("zastoBasMi"));
+    document.getElementById("zastoBasMi").classList.remove("mobile-text-center");
+    document.getElementById("zastoImg").classList.remove("col-md-6");
+    document.getElementById("zastoImg").classList.add("col-md-9");
+    document.getElementById("zastoImg").classList.add("col-lg-6");
+    document.getElementById("zastoImg").classList.remove("order-md-0");
+    document.getElementById("zastoRight").classList.remove("order-md-1");
   }
 }
 
-const zastoWidth = window.matchMedia("(width: 768px)");
+const zastoWidth = window.matchMedia("(max-width: 992px)");
 pullTitleUp(zastoWidth); // Call listener function at run time
 zastoWidth.addListener(pullTitleUp); // Attach listener function on state changes

@@ -10432,7 +10432,7 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-  background-color: #00ac69 !important;
+  background-color: #52afab !important;
 }
 
 a.bg-success:hover,
@@ -10553,7 +10553,7 @@ button.bg-yellow:focus {
 }
 
 .bg-green {
-  background-color: #00ac69 !important;
+  background-color: #52afab !important;
 }
 
 a.bg-green:hover,
@@ -10862,7 +10862,7 @@ button.bg-danger-soft:focus {
 }
 
 .border-success {
-  border-color: #00ac69 !important;
+  border-color: #52afab !important;
 }
 
 .border-info {
@@ -10906,7 +10906,7 @@ button.bg-danger-soft:focus {
 }
 
 .border-green {
-  border-color: #00ac69 !important;
+  border-color: #52afab !important;
 }
 
 .border-teal {
@@ -17874,7 +17874,7 @@ button.bg-danger-soft:focus {
 }
 
 .text-primary {
-  color: #00ac69 !important;
+  color: #52afab !important;
 }
 
 a.text-primary:hover,
@@ -17892,7 +17892,7 @@ a.text-secondary:focus {
 }
 
 .text-success {
-  color: #00ac69 !important;
+  color: #52afab !important;
 }
 
 a.text-success:hover,
@@ -17997,7 +17997,7 @@ a.text-yellow:focus {
 }
 
 .text-green {
-  color: #00ac69 !important;
+  color: #52afab !important;
 }
 
 a.text-green:hover,
@@ -18515,7 +18515,7 @@ body {
 }
 
 .overlay-success:before {
-  background-color: #00ac69 !important;
+  background-color: #52afab !important;
 }
 
 .overlay-info:before {
@@ -18559,7 +18559,7 @@ body {
 }
 
 .overlay-green:before {
-  background-color: #00ac69 !important;
+  background-color: #52afab !important;
 }
 
 .overlay-teal:before {
@@ -18715,7 +18715,7 @@ body {
 }
 
 .border-success {
-  border-color: #00ac69 !important;
+  border-color: #52afab !important;
 }
 
 .border-info {
@@ -18759,7 +18759,7 @@ body {
 }
 
 .border-green {
-  border-color: #00ac69 !important;
+  border-color: #52afab !important;
 }
 
 .border-teal {

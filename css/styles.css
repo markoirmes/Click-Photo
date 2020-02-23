@@ -669,11 +669,6 @@ pre code {
   margin-right: -1.5rem;*/
 }
 
-.row-margin {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
-
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -21928,5 +21923,10 @@ section {
   .mobile-pricingcard-3 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .row {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
   }
 }

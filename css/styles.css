@@ -664,8 +664,6 @@ pre code {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
 }
 
 .no-gutters {
@@ -21898,10 +21896,10 @@ section {
     display: flex;
     justify-content: center;
   }
-  /* .container {
+  .container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  } */
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -21911,12 +21909,12 @@ section {
   }
 }
 
-/* @media only screen and (max-width: 468px) {
+@media only screen and (max-width: 468px) {
   .footer-container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-} */
+}
 
 @media only screen and (min-width: 992px) {
   .mobile-pricingcard-3 {

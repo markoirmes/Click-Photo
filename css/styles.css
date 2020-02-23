@@ -748,8 +748,8 @@ pre code {
 .col-1 {
   position: relative;
   width: 100%;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  /*padding-right: 1.5rem;
+  padding-left: 1.5rem; */
 }
 
 .col {

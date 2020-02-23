@@ -42,13 +42,6 @@
     }
   });
 
-  // place title above container on mobile - zasto bas mi
-  $(document).ready(function() {
-    if (($(window).width() = 768)) {
-      $("#zastoBasMi").prependTo("#zastoCenter");
-    }
-  });
-
   // Collapse Navbar
   // Add styling fallback for when a transparent background .navbar-marketing is scrolled
   var navbarCollapse = function() {
@@ -67,6 +60,7 @@
   $(window).scroll(navbarCollapse);
 })(jQuery);
 
+// CENOVNIK responsive fix
 function addClassToCenovnik(cenovnikWidth) {
   if (cenovnikWidth.matches) {
     // If media query matches
@@ -85,3 +79,17 @@ function addClassToCenovnik(cenovnikWidth) {
 const cenovnikWidth = window.matchMedia("(max-width: 768px)");
 addClassToCenovnik(cenovnikWidth); // Call listener function at run time
 cenovnikWidth.addListener(addClassToCenovnik); // Attach listener function on state changes
+
+// Zasto Bas Mi responsive fix
+function pullTitleUp(zastoWidth) {
+  if (zastoWidth.matches) {
+    // If media query matches
+    document.getElementById("zastoCenter").prependChild(document.getElementById("zastoBasMi"));
+  } else {
+    document.getElementById("zastoRight").prependChild(document.getElementById("zastoBasMi"));
+  }
+}
+
+const zastoWidth = window.matchMedia("(width: 768px)");
+pullTitleUp(zastoWidth); // Call listener function at run time
+zastoWidth.addListener(pullTitleUp); // Attach listener function on state changes

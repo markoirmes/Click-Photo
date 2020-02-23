@@ -64,16 +64,8 @@ function addClassToCenovnik(cenovnikWidth) {
   if (cenovnikWidth.matches) {
     // If media query matches
     document.getElementById("cenovnik").classList.add("py-10");
-    document.getElementById("cenovnikFaq").classList.remove("py-10");
-    document.getElementById("cenovnikFaq").classList.add("pb-10");
-    document.getElementById("cenovnikFaq").classList.add("pt-5");
-    document.getElementById("cenovnikMargin").classList.remove("my-10");
   } else {
     document.getElementById("cenovnik").classList.remove("py-10");
-    document.getElementById("cenovnikFaq").classList.add("py-10");
-    document.getElementById("cenovnikFaq").classList.remove("pb-10");
-    document.getElementById("cenovnikFaq").classList.remove("pt-5");
-    document.getElementById("cenovnikMargin").classList.add("my-10");
   }
 }
 

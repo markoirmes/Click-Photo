@@ -42,6 +42,13 @@
     }
   });
 
+  // place title above container on mobile - zasto bas mi
+  $(document).ready(function() {
+    if (($(window).width() = 768)) {
+      $("#zastoBasMi").prependTo("#zastoCenter");
+    }
+  });
+
   // Collapse Navbar
   // Add styling fallback for when a transparent background .navbar-marketing is scrolled
   var navbarCollapse = function() {

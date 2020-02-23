@@ -94,6 +94,12 @@ function pullTitleUp(zastoWidth) {
     document.getElementById("zastoRight").classList.add("col-md-6");
     document.getElementsByClassName("zastoQuestion")[0].classList.add("col-md-12");
     document.getElementsByClassName("zastoQuestion")[0].classList.remove("col-md-6");
+    document.getElementsByClassName("zastoQuestion")[1].classList.add("col-md-12");
+    document.getElementsByClassName("zastoQuestion")[1].classList.remove("col-md-6");
+    document.getElementsByClassName("zastoQuestion")[2].classList.add("col-md-12");
+    document.getElementsByClassName("zastoQuestion")[2].classList.remove("col-md-6");
+    document.getElementsByClassName("zastoQuestion")[3].classList.add("col-md-12");
+    document.getElementsByClassName("zastoQuestion")[3].classList.remove("col-md-6");
   } else {
     document.getElementById("zastoRight").prepend(document.getElementById("zastoBasMi"));
     document.getElementById("zastoBasMi").classList.remove("text-center");
@@ -105,6 +111,12 @@ function pullTitleUp(zastoWidth) {
     document.getElementById("zastoRight").classList.remove("col-md-6");
     document.getElementsByClassName("zastoQuestion")[0].classList.remove("col-md-12");
     document.getElementsByClassName("zastoQuestion")[0].classList.add("col-md-6");
+    document.getElementsByClassName("zastoQuestion")[1].classList.remove("col-md-12");
+    document.getElementsByClassName("zastoQuestion")[1].classList.add("col-md-6");
+    document.getElementsByClassName("zastoQuestion")[2].classList.remove("col-md-12");
+    document.getElementsByClassName("zastoQuestion")[2].classList.add("col-md-6");
+    document.getElementsByClassName("zastoQuestion")[3].classList.remove("col-md-12");
+    document.getElementsByClassName("zastoQuestion")[3].classList.add("col-md-6");
   }
 }
 

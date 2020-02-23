@@ -21350,7 +21350,7 @@ section {
   font-size: 1.5rem;
 }
 .pricing .pricing-price .pricing-price-period {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .pricing .pricing-list {
   margin-bottom: 0;
@@ -21885,7 +21885,7 @@ section {
   width: 1em !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .mobile-text-center {
     text-align: center;
   }

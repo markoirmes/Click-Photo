@@ -21895,3 +21895,10 @@ section {
     justify-content: center;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .mobile-pricingcard-3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}

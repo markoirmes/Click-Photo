@@ -19097,8 +19097,8 @@ body {
   transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
 }
 .lift:hover {
-  -webkit-transform: translateY(-0.3333333333rem);
-  transform: translateY(-0.3333333333rem);
+  /* -webkit-transform: translateY(-0.3333333333rem);
+  transform: translateY(-0.3333333333rem); */
   box-shadow: 0 0.5rem 2rem 0 rgba(31, 45, 65, 0.25);
 }
 .lift:active {

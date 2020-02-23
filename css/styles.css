@@ -21315,6 +21315,8 @@ section {
   fill: currentColor;
 }
 
+/*
+
 .testimonial .testimonial-brand {
   fill: currentColor;
   margin-bottom: 1.35rem;
@@ -21332,6 +21334,8 @@ section {
 .testimonial .testimonial-position {
   font-weight: lighter;
 }
+
+*/
 
 @media (min-width: 992px) {
   .divider-right {

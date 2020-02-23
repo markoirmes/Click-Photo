@@ -84,9 +84,9 @@ cenovnikWidth.addListener(addClassToCenovnik); // Attach listener function on st
 function pullTitleUp(zastoWidth) {
   if (zastoWidth.matches) {
     // If media query matches
-    document.getElementById("zastoCenter").prependChild(document.getElementById("zastoBasMi"));
+    document.getElementById("zastoCenter").prepend(document.getElementById("zastoBasMi"));
   } else {
-    document.getElementById("zastoRight").prependChild(document.getElementById("zastoBasMi"));
+    document.getElementById("zastoRight").prepend(document.getElementById("zastoBasMi"));
   }
 }
 

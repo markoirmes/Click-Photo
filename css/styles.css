@@ -18441,8 +18441,8 @@ body {
 }
 
 .bg-gradient-primary-to-secondary {
-  background-color: #045474;
-  background-image: linear-gradient(135deg, #045474 0%, #0296a9 100%);
+  background-color: #52afab;
+  background-image: linear-gradient(135deg, #5dc5bf 0%, #52afab 100%);
 }
 
 .bg-gray-100 {

@@ -85,6 +85,7 @@ function pullTitleUp(zastoWidth) {
   if (zastoWidth.matches) {
     // If media query matches
     document.getElementById("zastoCenter").prepend(document.getElementById("zastoBasMi"));
+    document.getElementById("zastoCenter").classList.remove("align-items-center");
     document.getElementById("zastoBasMi").classList.add("text-center");
     document.getElementById("zastoImg").classList.add("col-md-6");
     document.getElementById("zastoImg").classList.remove("col-md-9");
@@ -102,6 +103,7 @@ function pullTitleUp(zastoWidth) {
     document.getElementsByClassName("zastoQuestion")[3].classList.remove("col-md-6");
   } else {
     document.getElementById("zastoRight").prepend(document.getElementById("zastoBasMi"));
+    document.getElementById("zastoCenter").classList.add("align-items-center");
     document.getElementById("zastoBasMi").classList.remove("text-center");
     document.getElementById("zastoImg").classList.remove("col-md-6");
     document.getElementById("zastoImg").classList.add("col-md-9");

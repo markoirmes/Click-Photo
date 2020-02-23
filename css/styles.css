@@ -21889,4 +21889,9 @@ section {
   .mobile-text-center {
     text-align: center;
   }
+
+  .mobile-socialicons-center {
+    display: flex;
+    justify-content: center;
+  }
 }

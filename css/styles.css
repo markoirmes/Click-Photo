@@ -3914,7 +3914,7 @@ fieldset:disabled a.btn {
 .show > .btn-teal.dropdown-toggle {
   color: #fff;
   background-color: #52afab;
-  border-color: #007a61;
+  border-color: #52afab;
 }
 .btn-teal:not(:disabled):not(.disabled):active:focus,
 .btn-teal:not(:disabled):not(.disabled).active:focus,

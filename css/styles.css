@@ -21901,6 +21901,9 @@ section {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+}
+
+@media only screen and (max-width: 468px) {
   .footer-container {
     padding-left: 1rem;
     padding-right: 1rem;

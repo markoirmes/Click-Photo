@@ -21195,12 +21195,6 @@ section {
   z-index: 0;
 }
 
-/*!
- * html5-device-mockups (https://github.com/pixelsign/html5-device-mockups)
- * Copyright 2013 - 2018 pixelsign
- * Licensed under MIT (https://github.com/pixelsign/html5-device-mockups/blob/master/LICENSE.txt)
- * Last Build: Thu Dec 20 2018 14:05:50
- */
 .device-wrapper {
   max-width: 300px;
   width: 100%;
@@ -21230,11 +21224,6 @@ section {
   cursor: pointer;
 }
 
-.device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"] {
-  padding-bottom: 198.89807163%;
-  background-image: url(../assets/img/device-mockups/iPhoneX/portrait.png);
-  z-index: initial;
-}
 
 .device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"] .screen {
   top: 3.254847645%;
@@ -21243,12 +21232,6 @@ section {
   height: 93.49030471%;
   border: 0px;
   z-index: 0;
-}
-
-.device[data-device="iPhoneX"][data-orientation="landscape"][data-color="black"] {
-  padding-bottom: 50.27700831%;
-  background-image: url(../assets/img/device-mockups/iPhoneX/landscape.png);
-  z-index: initial;
 }
 
 .device[data-device="iPhoneX"][data-orientation="landscape"][data-color="black"] .screen {
@@ -21271,11 +21254,6 @@ section {
   height: 93.6288088643%;
 }
 
-.device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"]::after {
-  content: "";
-  background-image: url(../assets/img/device-mockups/iPhoneX/portrait_black.png);
-}
-
 .device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"] .button {
   display: none;
   top: 0%;
@@ -21293,11 +21271,6 @@ section {
   left: 3.4626038781%;
   width: 93.0747922438%;
   height: 87.3278236915%;
-}
-
-.device[data-device="iPhoneX"][data-orientation="landscape"][data-color="black"]::after {
-  content: "";
-  background-image: url(../assets/img/device-mockups/iPhoneX/landscape_black.png);
 }
 
 .device[data-device="iPhoneX"][data-orientation="landscape"][data-color="black"] .button {
@@ -21807,8 +21780,6 @@ section {
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
-
-/* MARKO CUSTOM CSS */
 
 /* Testimonial slider */
 .col-center {

@@ -21873,6 +21873,11 @@ section {
   background-color: #ffffff !important;
 }
 
+/* hidden */
+.hidden {
+  display: none !important;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 767px) {

@@ -6083,9 +6083,9 @@ input[type="button"].btn-block {
 }
 .dropdown-item.active,
 .dropdown-item:active {
-  color: #fff;
+  color: #172130;
   text-decoration: none;
-  background-color: #0061f2;
+  background-color: #eff3f9;
 }
 .dropdown-item.disabled,
 .dropdown-item:disabled {
@@ -8183,13 +8183,13 @@ a.badge-secondary-soft.focus {
 }
 
 .badge-success-soft {
-  color: #1f2d41;
-  background-color: #bfe5dc;
+  color: #ffffff;
+  background-color: #52afab;
 }
 a.badge-success-soft:hover,
 a.badge-success-soft:focus {
-  color: #1f2d41;
-  background-color: #9bd6c8;
+  color: #ffffff;
+  background-color: #52afab;
 }
 a.badge-success-soft:focus,
 a.badge-success-soft.focus {
@@ -21224,7 +21224,6 @@ section {
   cursor: pointer;
 }
 
-
 .device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"] .screen {
   top: 3.254847645%;
   left: 7.162534435%;
@@ -21867,6 +21866,11 @@ section {
 .dropdown-menu .dropdown-item:last-child {
   border-bottom-right-radius: 0.35rem;
   border-bottom-left-radius: 0.35rem;
+}
+
+/* white navigation */
+.white-nav {
+  background-color: #ffffff !important;
 }
 
 /* MEDIA QUERIES */

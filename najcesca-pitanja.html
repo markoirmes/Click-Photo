@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content />
+    <meta name="author" content />
+    <title>Click Photo | Online izrada fotografija</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap&subset=latin-ext" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+  </head>
+  <body>
+    <div id="layoutDefault">
+      <div id="layoutDefault_content">
+        <main>
+          <nav id="navigation" class="navbar navbar-marketing navbar-expand-lg bg-dark navbar-dark fixed-top">
+            <div class="container">
+              <a class="navbar-brand text-white" href="index.html"><img id="logo" src="assets/img/logo.png" width="110"/></a
+              ><button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i data-feather="menu"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mr-lg-5">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Početna</a></li>
+                  <li class="nav-item"><a class="nav-link" href="javascript:void(0);">O nama</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cenovnik.html">Cenovnik</a></li>
+                  <li class="nav-item dropdown no-caret">
+                    <a
+                      class="nav-link active dropdown-toggle"
+                      id="navbarDropdownDocs"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      >Informacije<i class="fas fa-chevron-right dropdown-arrow"></i
+                    ></a>
+                    <div class="dropdown-menu dropdown-menu-right animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
+                      <a class="dropdown-item active py-3" href="najcesca-pitanja.html"
+                        ><div class="icon-stack bg-gradient-primary-to-secondary text-white mr-4"><i class="fas fa-question"></i></div>
+                        <div>
+                          <div class="small text-gray-500">Sve o korišćenju naših usluga</div>
+                          Najčešća pitanja
+                        </div></a
+                      >
+                      <div class="dropdown-divider m-0"></div>
+                      <a class="dropdown-item py-3" href="politika-privatnosti.html"
+                        ><div class="icon-stack bg-gradient-primary-to-secondary text-white mr-4"><i class="fas fa-lock"></i></div>
+                        <div>
+                          <div class="small text-gray-500">Privatnost</div>
+                          Politika privatnosti
+                        </div></a
+                      >
+                      <div class="dropdown-divider m-0"></div>
+                      <a class="dropdown-item py-3" href="politika-privatnosti.html"
+                        ><div class="icon-stack bg-gradient-primary-to-secondary text-white mr-4"><i class="fas fa-file-alt"></i></div>
+                        <div>
+                          <div class="small text-gray-500">Sve o korišćenju sajta i usluga</div>
+                          Uslovi korišćenja
+                        </div></a
+                      >
+                    </div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                </ul>
+                <a class="btn btn-teal btn-marketing rounded-pill px-4 ml-lg-4 lift lift-sm" href="javascript:void(0);"
+                  >Naruči fotke<i class="fas fa-arrow-right ml-1"></i
+                ></a>
+              </div>
+            </div>
+          </nav>
+
+          <header class="page-header page-header-dark bg-dark">
+            <div class="page-header-content pt-10">
+              <div class="container text-center">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <h1 class="page-header-title mb-3">Najčešća pitanja</h1>
+                    <p class="page-header-text">Odgovorili smo na pitanja koje nam korisnici najčešće postavljaju.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="svg-border-rounded text-light">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
+                <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+              </svg>
+            </div>
+          </header>
+          <section class="bg-light py-10">
+            <div class="container">
+              <div class="d-flex align-items-center mb-5"></div>
+              <div class="accordion accordion-faq mb-5" id="fotografijeAccordion">
+                <div class="card border-bottom">
+                  <div class="card-body">
+                    <div class="accordion-faq-title">
+                      <div class="mr-2">
+                        <h4 class="mb-0">Fotografije</h4>
+                        <p class="card-text text-gray-500">Sve informacije o fotografijama možete pronaći ovde.</p>
+                      </div>
+                      <div class="badge badge-success-soft badge-pill">3 pitanja</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-faq-item">
+                  <a
+                    class="card-header"
+                    id="fotografijeHeadingOne"
+                    data-toggle="collapse"
+                    data-target="#fotografijeCollapseOne"
+                    aria-expanded="true"
+                    aria-controls="fotografijeCollapseOne"
+                    href="javascript:void(0);"
+                    ><div class="accordion-faq-item-heading">
+                      Lorem ipsum dolor sit amet<i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i></div
+                  ></a>
+                  <div class="collapse show" id="fotografijeCollapseOne" aria-labelledby="fotografijeHeadingOne" data-parent="#fotografijeAccordion">
+                    <div class="card-body border-bottom">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                      ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                      probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-faq-item">
+                  <a
+                    class="card-header collapsed"
+                    id="fotografijeHeadingTwo"
+                    data-toggle="collapse"
+                    data-target="#fotografijeCollapseTwo"
+                    aria-expanded="true"
+                    aria-controls="fotografijeCollapseTwo"
+                    href="javascript:void(0);"
+                    ><div class="accordion-faq-item-heading">
+                      Lorem ipsum dolor sit amet<i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i></div
+                  ></a>
+                  <div class="collapse" id="fotografijeCollapseTwo" aria-labelledby="fotografijeHeadingTwo" data-parent="#fotografijeAccordion">
+                    <div class="card-body border-bottom">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                      ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                      probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-faq-item">
+                  <a
+                    class="card-header collapsed"
+                    id="fotografijeHeadingThree"
+                    data-toggle="collapse"
+                    data-target="#fotografijeCollapseThree"
+                    aria-expanded="true"
+                    aria-controls="fotografijeCollapseThree"
+                    href="javascript:void(0);"
+                    ><div class="accordion-faq-item-heading">
+                      Lorem ipsum dolor sit amet<i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i></div
+                  ></a>
+                  <div class="collapse" id="fotografijeCollapseThree" aria-labelledby="fotografijeHeadingThree" data-parent="#fotografijeAccordion">
+                    <div class="card-body border-bottom">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                      ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                      probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-faq mb-5" id="dostavaAccordion">
+                <div class="card border-bottom">
+                  <div class="card-body">
+                    <div class="accordion-faq-title">
+                      <div class="mr-2">
+                        <h4 class="mb-0">Dostava i plaćanje</h4>
+                        <p class="card-text text-gray-500">Saznajte kako vršimo dostavu i naplatu</p>
+                      </div>
+                      <div class="badge badge-success-soft badge-pill">3 pitanja</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-faq-item">
+                  <a
+                    class="card-header collapsed"
+                    id="dostavaHeadingOne"
+                    data-toggle="collapse"
+                    data-target="#dostavaCollapseOne"
+                    aria-expanded="true"
+                    aria-controls="dostavaCollapseOne"
+                    href="javascript:void(0);"
+                    ><div class="accordion-faq-item-heading">
+                      Lorem ipsum dolor sit amet<i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i></div
+                  ></a>
+                  <div class="collapse" id="dostavaCollapseOne" aria-labelledby="dostavaHeadingOne" data-parent="#dostavaAccordion">
+                    <div class="card-body border-bottom">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                      ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                      probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-faq-item">
+                  <a
+                    class="card-header collapsed"
+                    id="dostavaHeadingTwo"
+                    data-toggle="collapse"
+                    data-target="#dostavaCollapseTwo"
+                    aria-expanded="true"
+                    aria-controls="dostavaCollapseTwo"
+                    href="javascript:void(0);"
+                    ><div class="accordion-faq-item-heading">
+                      Lorem ipsum dolor sit amet<i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i></div
+                  ></a>
+                  <div class="collapse" id="dostavaCollapseTwo" aria-labelledby="dostavaHeadingTwo" data-parent="#dostavaAccordion">
+                    <div class="card-body border-bottom">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                      ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                      probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-faq-item">
+                  <a
+                    class="card-header collapsed"
+                    id="dostavaHeadingThree"
+                    data-toggle="collapse"
+                    data-target="#dostavaCollapseThree"
+                    aria-expanded="true"
+                    aria-controls="dostavaCollapseThree"
+                    href="javascript:void(0);"
+                    ><div class="accordion-faq-item-heading">
+                      Lorem ipsum dolor sit amet<i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i></div
+                  ></a>
+                  <div class="collapse" id="dostavaCollapseThree" aria-labelledby="dostavaHeadingThree" data-parent="#dostavaAccordion">
+                    <div class="card-body border-bottom">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                      ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                      probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-faq" id="nalogAccordion">
+                <div class="card border-bottom">
+                  <div class="card-body">
+                    <div class="accordion-faq-title">
+                      <div class="mr-2">
+                        <h4 class="mb-0">Moj nalog i podaci</h4>
+                        <p class="card-text text-gray-500">Sve vezano za nalog i podatke.</p>
+                      </div>
+                      <div class="badge badge-success-soft badge-pill">3 pitanja</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-faq-item">
+                  <a
+                    class="card-header collapsed"
+                    id="nalogHeadingOne"
+                    data-toggle="collapse"
+                    data-target="#nalogCollapseOne"
+                    aria-expanded="true"
+                    aria-controls="nalogCollapseOne"
+                    href="javascript:void(0);"
+                    ><div class="accordion-faq-item-heading">
+                      Lorem ipsum dolor sit amet<i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i></div
+                  ></a>
+                  <div class="collapse" id="nalogCollapseOne" aria-labelledby="nalogHeadingOne" data-parent="#nalogAccordion">
+                    <div class="card-body border-bottom">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                      ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                      probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-faq-item">
+                  <a
+                    class="card-header collapsed"
+                    id="nalogHeadingTwo"
+                    data-toggle="collapse"
+                    data-target="#nalogCollapseTwo"
+                    aria-expanded="true"
+                    aria-controls="nalogCollapseTwo"
+                    href="javascript:void(0);"
+                    ><div class="accordion-faq-item-heading">
+                      Lorem ipsum dolor sit amet<i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i></div
+                  ></a>
+                  <div class="collapse" id="nalogCollapseTwo" aria-labelledby="nalogHeadingTwo" data-parent="#nalogAccordion">
+                    <div class="card-body border-bottom">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                      ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                      probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="card accordion-faq-item">
+                  <a
+                    class="card-header collapsed"
+                    id="nalogHeadingThree"
+                    data-toggle="collapse"
+                    data-target="#nalogCollapseThree"
+                    aria-expanded="true"
+                    aria-controls="nalogCollapseThree"
+                    href="javascript:void(0);"
+                    ><div class="accordion-faq-item-heading">
+                      Lorem ipsum dolor sit amet<i class="accordion-faq-item-heading-arrow" data-feather="chevron-down"></i></div
+                  ></a>
+                  <div class="collapse" id="nalogCollapseThree" aria-labelledby="nalogHeadingThree" data-parent="#nalogAccordion">
+                    <div class="card-body border-bottom">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                      skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                      single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                      ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                      probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="svg-border-rounded text-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
+                <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+              </svg>
+            </div>
+          </section>
+        </main>
+      </div>
+      <div id="layoutDefault_footer">
+        <footer class="footer pt-10 pb-5 mt-auto bg-dark footer-dark mobile-text-center">
+          <div class="container footer-container">
+            <div class="row ">
+              <div class="col-lg-3">
+                <div class="footer-brand">Click Photo</div>
+                <div class="mb-3">Online izrada fotografija</div>
+                <div class="icon-list-social mb-5 mobile-socialicons-center">
+                  <a class="icon-list-social-link" href="javascript:void(0);"><i class="fab fa-instagram"></i></a
+                  ><a class="icon-list-social-link" href="javascript:void(0);"><i class="fab fa-facebook"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <div class="row ">
+                  <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="text-uppercase-expanded text-xs mb-4">O fotografijama</div>
+                    <ul class="list-unstyled mb-0">
+                      <li class="mb-2"><a href="javascript:void(0);">Veličina papira</a></li>
+                      <li class="mb-2"><a href="javascript:void(0);">Vrsta papira</a></li>
+                      <li class="mb-2"><a href="javascript:void(0);">Odnos dimenzija</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <div class="text-uppercase-expanded text-xs mb-4">O nama</div>
+                    <ul class="list-unstyled mb-0">
+                      <li class="mb-2"><a href="javascript:void(0);">O foto studiju</a></li>
+                      <li class="mb-2"><a href="javascript:void(0);">Upoznajte tim</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                    <div class="text-uppercase-expanded text-xs mb-4">Informacije</div>
+                    <ul class="list-unstyled mb-0">
+                      <li class="mb-2"><a href="javascript:void(0);">Cenovnik</a></li>
+                      <li class="mb-2"><a href="javascript:void(0);">Kako poručiti</a></li>
+                      <li class="mb-2"><a href="javascript:void(0);">Najčešća pitanja</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="text-uppercase-expanded text-xs mb-4">Pravne stvari</div>
+                    <ul class="list-unstyled mb-0">
+                      <li class="mb-2"><a href="javascript:void(0);">Politika privatnosti</a></li>
+                      <li class="mb-2"><a href="javascript:void(0);">Uslovi korišćenja</a></li>
+                      <li><a href="javascript:void(0);">Dostava</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="my-5" />
+            <div class="row  align-items-center">
+              <div class="col-md-6 small">Copyright 2020 &#xA9; Click Photo. Sva prava zadržana.</div>
+              <div class="col-md-6 text-md-right small">
+                <a href="politika-privatnosti.html">Politika privatnosti</a>
+                &#xB7;
+                <a href="uslovi-koriscenja.html">Uslovi korišćenja</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/navcolor.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        disable: "mobile",
+        duration: 600,
+        once: true
+      });
+    </script>
+  </body>
+</html>

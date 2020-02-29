@@ -21878,6 +21878,33 @@ section {
   display: none !important;
 }
 
+.img-div {
+  min-width: 202px;
+  min-height: 302px;
+  max-width: 202px;
+  max-height: 302px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0rem 0rem 2rem 0rem rgba(0, 0, 0, 0.2) !important;
+}
+
+.img-div img {
+  max-width: 200px;
+  max-height: 300px;
+}
+
+.landscape img {
+  transform: rotate(90deg);
+  max-width: 300px !important;
+  max-height: 200px !important;
+}
+
+.thumbs {
+  margin-top: 20px;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 767px) {

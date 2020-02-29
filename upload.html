@@ -109,18 +109,16 @@
               <div class="row justify-content-center text-center">
                 <div class="col-12">
                   <select id="dimenzija">
-                    <option value="0" disable selected>Dimenzija</option>
-                    <option>9x13</option>
-                    <option>10x15</option>
-                    <option>13x18</option>
-                    <option>15x21</option>
-                    <option>20x30</option>
-                    <option>25x38</option>
+                    <option value="1">9x13</option>
+                    <option value="2">10x15</option>
+                    <option value="3">13x18</option>
+                    <option value="4">15x21</option>
+                    <option value="5">20x30</option>
+                    <option value="6">25x38</option>
                   </select>
                   <select id="papir"
-                    ><option value="0" disable selected>Vrsta papira</option>
-                    <option>Mat</option>
-                    <option>Sjajni</option>
+                    ><option value="1" selected>Mat</option>
+                    <option value="2">Sjajni</option>
                   </select>
                   <input class="hidden" type="file" id="files" name="files" multiple />
                   <button id="dodaj" class="btn btn-teal btn-marketing rounded-pill lift lift-sm">Dodaj<i class="fas fa-file-upload ml-1"></i></button
@@ -134,7 +132,7 @@
                 <div class="col-lg-9 col-md-12">
                   <div class="row" id="thumbnails"></div>
                 </div>
-                <div class="col-lg-3 col-md-12">Cenovnik</div>
+                <div class="col-lg-3 col-md-12">Cenovnik ide ovde</div>
               </div>
 
               <div class="svg-border-rounded text-dark">
@@ -223,6 +221,8 @@
     </script>
 
     <script>
+      function deleteImage() {}
+
       // CREATE EVENT LISTENER FOR DIV CHANGES
       const target = document.querySelector("#thumbnails");
       // create an observer instance
@@ -230,6 +230,7 @@
         mutations.forEach(function(mutation) {
           if (document.getElementById("thumbnails").hasChildNodes()) {
             document.getElementById("obrisiSve").disabled = false;
+            $("select").niceSelect();
 
             // CHECK ASPECT RATIO AND ADJUST ORIENTATION
             const nizSlika = document.getElementsByClassName("upload-image");
@@ -301,10 +302,40 @@
           reader.addEventListener(
             "load",
             function() {
+              // GENERATE IMAGE ELEMENT
               const mainDiv = document.createElement("div");
               mainDiv.setAttribute("class", "col-lg-4 col-md-6 thumbs");
               const imgDiv = document.createElement("div");
               imgDiv.setAttribute("class", "img-div");
+              const deleteButton = document.createElement("a");
+              deleteButton.setAttribute("class", "deleteImg");
+              deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+              const selectFieldSize = document.createElement("select");
+              const size1 = document.createElement("option");
+              size1.text = "9x13";
+              const size2 = document.createElement("option");
+              size2.text = "10x15";
+              const size3 = document.createElement("option");
+              size3.text = "13x18";
+              const size4 = document.createElement("option");
+              size4.text = "15x21";
+              const size5 = document.createElement("option");
+              size5.text = "20x30";
+              const size6 = document.createElement("option");
+              size6.text = "25x38";
+              selectFieldSize.add(size1);
+              selectFieldSize.add(size2);
+              selectFieldSize.add(size3);
+              selectFieldSize.add(size4);
+              selectFieldSize.add(size5);
+              selectFieldSize.add(size6);
+              const selectFieldPaper = document.createElement("select");
+              const paper1 = document.createElement("option");
+              paper1.text = "Mat";
+              const paper2 = document.createElement("option");
+              paper2.text = "Sjajan";
+              selectFieldPaper.add(paper1);
+              selectFieldPaper.add(paper2);
               const image = new Image();
               image.setAttribute("class", "upload-image");
               image.title = file.name;
@@ -312,6 +343,9 @@
               preview.appendChild(mainDiv);
               mainDiv.appendChild(imgDiv);
               imgDiv.append(image);
+              mainDiv.appendChild(selectFieldSize);
+              mainDiv.appendChild(selectFieldPaper);
+              mainDiv.appendChild(deleteButton);
             },
             false
           );

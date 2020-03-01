@@ -21879,10 +21879,10 @@ section {
 }
 
 .img-div {
-  min-width: 202px;
-  min-height: 302px;
-  max-width: 202px;
-  max-height: 302px;
+  min-width: 200px;
+  min-height: 300px;
+  max-width: 200px;
+  max-height: 3020x;
   margin-bottom: 5px;
   background: white;
   display: flex;
@@ -21913,6 +21913,10 @@ section {
   padding-right: 10px;
   height: 30px;
   line-height: 30px;
+}
+
+.cp-10 {
+  padding: 10px;
 }
 
 /* MEDIA QUERIES */

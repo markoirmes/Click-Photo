@@ -132,14 +132,50 @@
                 <div class="col-lg-9 col-md-12">
                   <div class="row" id="thumbnails"></div>
                 </div>
-                <div class="col-lg-3 col-md-12">Cenovnik ide ovde</div>
-              </div>
+                <div class="col-lg-3 col-md-12">
+                  <div class="container cp-10">
+                    <div class="row"><div class="col-12">Fotografije</div></div>
+                    <div class="row">
+                      <div class="col-6 text-left">Dodatih</div>
+                      <div class="col-6 text-right">10</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 text-left">Za izradu</div>
+                      <div class="col-6 text-right">50</div>
+                    </div>
+                  </div>
+                  <div class="container cp-10">
+                    <div class="row">
+                      <div class="col-12">Vaša korpa</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 text-left">Cena</div>
+                      <div class="col-6 text-right">500</div>
 
-              <div class="svg-border-rounded text-dark">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
-                  <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
-                </svg>
+                      <div class="col-6 text-left">Dostava</div>
+                      <div class="col-6 text-right">300</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6 text-left">UKUPNO</div>
+                      <div class="col-6 text-right">800</div>
+                    </div>
+                  </div>
+
+                  <div class="container cp-10">
+                    <div class="row">
+                      <div class="col-12">
+                        <button>PORUCITE</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div class="svg-border-rounded text-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
+                <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+              </svg>
             </div>
           </section>
         </main>
@@ -221,25 +257,39 @@
     </script>
 
     <script>
-      function deleteImage() {}
-
-      // CREATE EVENT LISTENER FOR DIV CHANGES
+      // CREATE EVENT LISTENER FOR DIV CHANGES - RUNS EVERY TIME IMAGE CONTAINER DOM CHANGES
       const target = document.querySelector("#thumbnails");
       // create an observer instance
       const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
           if (document.getElementById("thumbnails").hasChildNodes()) {
+            // Enable delete all button
             document.getElementById("obrisiSve").disabled = false;
+
+            // REPLACE DROPDOWN STYLING
             $("select").niceSelect();
 
             // CHECK ASPECT RATIO AND ADJUST ORIENTATION
             const nizSlika = document.getElementsByClassName("upload-image");
-            for (var i = 0; i < nizSlika.length; i++) {
+            for (let i = 0; i < nizSlika.length; i++) {
               if (nizSlika[i].naturalWidth > nizSlika[i].naturalHeight) {
                 nizSlika[i].parentElement.classList.add("landscape");
               }
             }
+
+            // DELETE BUTTON FUNCTION
+            const deleteButton = document.getElementsByClassName("deleteImg");
+            for (let i = 0; i < deleteButton.length; i++) {
+              deleteButton[i].addEventListener(
+                "click",
+                function(e) {
+                  e.currentTarget.parentNode.remove();
+                },
+                false
+              );
+            }
           } else {
+            // Disable delete all button
             document.getElementById("obrisiSve").disabled = true;
           }
         });
@@ -307,35 +357,51 @@
               mainDiv.setAttribute("class", "col-lg-4 col-md-6 thumbs");
               const imgDiv = document.createElement("div");
               imgDiv.setAttribute("class", "img-div");
-              const deleteButton = document.createElement("a");
+              const deleteButton = document.createElement("button");
               deleteButton.setAttribute("class", "deleteImg");
               deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
               const selectFieldSize = document.createElement("select");
+              selectFieldSize.setAttribute("class", "sizeSelect");
               const size1 = document.createElement("option");
               size1.text = "9x13";
+              size1.value = "9x13";
+              selectFieldSize.add(size1);
               const size2 = document.createElement("option");
               size2.text = "10x15";
+              size2.value = "10x15";
+              selectFieldSize.add(size2);
               const size3 = document.createElement("option");
               size3.text = "13x18";
+              size3.value = "13x18";
+              selectFieldSize.add(size3);
               const size4 = document.createElement("option");
               size4.text = "15x21";
+              size4.value = "9x13";
+              selectFieldSize.add(size4);
               const size5 = document.createElement("option");
               size5.text = "20x30";
+              size5.value = "20x30";
+              selectFieldSize.add(size5);
               const size6 = document.createElement("option");
               size6.text = "25x38";
-              selectFieldSize.add(size1);
-              selectFieldSize.add(size2);
-              selectFieldSize.add(size3);
-              selectFieldSize.add(size4);
-              selectFieldSize.add(size5);
+              size6.value = "25x38";
               selectFieldSize.add(size6);
+
               const selectFieldPaper = document.createElement("select");
+              selectFieldPaper.setAttribute("class", "paperSelect");
               const paper1 = document.createElement("option");
               paper1.text = "Mat";
+              paper1.value = "Mat";
+              selectFieldPaper.add(paper1);
               const paper2 = document.createElement("option");
               paper2.text = "Sjajan";
-              selectFieldPaper.add(paper1);
+              paper2.value = "Sjajan";
               selectFieldPaper.add(paper2);
+
+              const qtyInput = document.createElement("input");
+              qtyInput.setAttribute("type", "number");
+              qtyInput.setAttribute("class", "qtyField");
+
               const image = new Image();
               image.setAttribute("class", "upload-image");
               image.title = file.name;
@@ -345,6 +411,7 @@
               imgDiv.append(image);
               mainDiv.appendChild(selectFieldSize);
               mainDiv.appendChild(selectFieldPaper);
+              mainDiv.appendChild(qtyInput);
               mainDiv.appendChild(deleteButton);
             },
             false

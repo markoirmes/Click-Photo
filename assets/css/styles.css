@@ -21919,6 +21919,48 @@ section {
   padding: 10px;
 }
 
+.qtyField {
+  min-width: 20px;
+  max-width: 50px;
+  padding-left: 10px;
+  font-size: 13px;
+  padding-right: 10px;
+  height: 30px;
+  line-height: 30px;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 50rem;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: normal;
+  outline: none;
+  position: relative;
+  text-align: left !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 767px) {

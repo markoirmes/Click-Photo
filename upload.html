@@ -118,8 +118,9 @@
                   </select>
                   <select id="papir"
                     ><option value="Mat" selected>Mat</option>
-                    <option value="Sjajni">Sjajni</option>
+                    <option value="Sjajan">Sjajan</option>
                   </select>
+                  <input id="kolicina" type="number" min="1" max="500" class="qty Field qtyFieldMain" value="1" />
                   <input class="hidden" type="file" id="files" name="files" multiple />
                   <button id="dodaj" class="btn btn-teal btn-marketing rounded-pill lift lift-sm">Dodaj<i class="fas fa-file-upload ml-1"></i></button
                   ><button id="obrisiSve" disabled class="btn btn-teal btn-marketing rounded-pill lift lift-sm confirm">
@@ -137,11 +138,11 @@
                     <div class="row"><div class="col-12">Fotografije</div></div>
                     <div class="row">
                       <div class="col-6 text-left">Dodatih</div>
-                      <div class="col-6 text-right">10</div>
+                      <div class="col-6 text-right" id="dodatih">-</div>
                     </div>
                     <div class="row">
                       <div class="col-6 text-left">Za izradu</div>
-                      <div class="col-6 text-right">50</div>
+                      <div class="col-6 text-right" id="zaIzradu">-</div>
                     </div>
                   </div>
                   <div class="container cp-10">
@@ -150,21 +151,21 @@
                     </div>
                     <div class="row">
                       <div class="col-6 text-left">Cena</div>
-                      <div class="col-6 text-right" id="cena">500</div>
+                      <div class="col-6 text-right" id="cena">-</div>
 
                       <div class="col-6 text-left">Dostava</div>
-                      <div class="col-6 text-right" id="dostava">300</div>
+                      <div class="col-6 text-right" id="dostava">-</div>
                     </div>
                     <div class="row">
                       <div class="col-6 text-left">UKUPNO</div>
-                      <div class="col-6 text-right" id="ukupno">800</div>
+                      <div class="col-6 text-right" id="ukupno">-</div>
                     </div>
                   </div>
 
                   <div class="container cp-10">
                     <div class="row">
                       <div class="col-12">
-                        <button>PORUCITE</button>
+                        <button id="kupovina" class="btn btn-teal btn-marketing rounded-pill lift lift-sm" disabled>NARUCI</button>
                       </div>
                     </div>
                   </div>
@@ -257,9 +258,23 @@
     </script>
 
     <script>
+      function poruci() {
+        const data = Array.prototype.slice.call(document.getElementsByClassName("thumbs")).map(function(thumb) {
+          return {
+            user: "",
+            size: "",
+            paper: "",
+            copies: 1,
+            name: "",
+            file: ""
+          };
+        });
+        console.log(data);
+      }
+
       // kalkulacija
 
-      function priceForSize(size) {
+      function cenaPoDimenziji(size) {
         switch (size) {
           case "9x13":
             return 10;
@@ -276,27 +291,32 @@
         }
       }
 
-      function poruci() {
-        const data = Array.prototype.slice.call(document.getElementsByClassName("thumbs")).map(function(thumb) {
-          return {
-            user: "",
-            size: "",
-            paper: "",
-            copies: 1,
-            name: "",
-            file: ""
-          };
-        });
-        console.log(data);
-      }
-
       function kalkulacija() {
         let cena = 0;
+        let izrada = 0;
+        let dostava = 300;
+
         const thumbs = Array.prototype.slice.call(document.getElementsByClassName("thumbs"));
         for (let i = 0; i < thumbs.length; i++) {
-          cena += priceForSize(thumbs[i].querySelector("select.sizeSelect").value) * thumbs[i].querySelector("input").value;
+          cena += cenaPoDimenziji(thumbs[i].querySelector("select.sizeSelect").value) * thumbs[i].querySelector("input").value;
+          izrada += 1 * thumbs[i].querySelector("input").value;
         }
+
+        if (cena >= 1000) {
+          dostava = 0;
+        } else if (cena == 0) {
+          dostava = 0;
+        } else {
+          dostava = 300;
+        }
+
+        const ukupno = cena + dostava;
+
         document.getElementById("cena").innerHTML = cena;
+        document.getElementById("dodatih").innerHTML = thumbs.length;
+        document.getElementById("dostava").innerHTML = dostava;
+        document.getElementById("zaIzradu").innerHTML = izrada;
+        document.getElementById("ukupno").innerHTML = ukupno;
       }
 
       // CREATE EVENT LISTENER FOR DIV CHANGES - RUNS EVERY TIME IMAGE CONTAINER DOM CHANGES
@@ -305,9 +325,9 @@
       const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
           if (document.getElementById("thumbnails").hasChildNodes()) {
-            // Enable delete all button
+            // Enable delete all button and purchase button
             document.getElementById("obrisiSve").disabled = false;
-
+            document.getElementById("kupovina").disabled = false;
             // CHECK ASPECT RATIO AND ADJUST ORIENTATION
             const nizSlika = document.getElementsByClassName("upload-image");
             for (let i = 0; i < nizSlika.length; i++) {
@@ -330,6 +350,7 @@
           } else {
             // Disable delete all button
             document.getElementById("obrisiSve").disabled = true;
+            document.getElementById("kupovina").disabled = true;
           }
           kalkulacija();
         });
@@ -399,7 +420,6 @@
               imgDiv.setAttribute("class", "img-div");
               const deleteButton = document.createElement("button");
               deleteButton.setAttribute("class", "deleteImg");
-
               deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
 
               // select dimension
@@ -430,7 +450,6 @@
               size6.text = "25x38";
               size6.value = "25x38";
               selectFieldSize.add(size6);
-
               selectFieldSize.value = document.getElementById("dimenzija").options[document.getElementById("dimenzija").selectedIndex].value;
 
               // select paper
@@ -444,13 +463,15 @@
               paper2.text = "Sjajan";
               paper2.value = "Sjajan";
               selectFieldPaper.add(paper2);
+              selectFieldPaper.value = document.getElementById("papir").options[document.getElementById("papir").selectedIndex].value;
 
               const qtyInput = document.createElement("input");
               qtyInput.setAttribute("type", "number");
               qtyInput.setAttribute("class", "qtyField");
-
-              qtyInput.value = "1";
+              qtyInput.setAttribute("min", "1");
+              qtyInput.setAttribute("max", "500");
               qtyInput.addEventListener("change", kalkulacija);
+              qtyInput.value = document.getElementById("kolicina").value;
 
               const image = new Image();
               image.setAttribute("class", "upload-image");

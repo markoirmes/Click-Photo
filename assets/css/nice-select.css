@@ -25,7 +25,6 @@
   user-select: none;
   white-space: nowrap;
   width: auto;
-  min-width: 140px;
 }
 .nice-select:hover {
   border-color: #dbdbdb;
@@ -104,7 +103,6 @@
   min-height: 34px;
 }
 .nice-select .list {
-  min-width: 140px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);

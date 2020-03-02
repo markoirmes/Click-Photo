@@ -98,13 +98,6 @@
                 </div>
               </div>
             </div>
-            <div class="svg-border-rounded text-light">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
-                <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
-              </svg>
-            </div>
-          </header>
-          <section class="bg-light py-10">
             <div class="container">
               <div class="row justify-content-center text-center">
                 <div class="col-12">
@@ -128,12 +121,26 @@
                   </button>
                 </div>
               </div>
-
+            </div>
+            <div class="svg-border-rounded text-light">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor">
+                <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+              </svg>
+            </div>
+          </header>
+          <section class="bg-light py-10">
+            <div class="container">
               <div class="row">
-                <div class="col-lg-9 col-md-12">
-                  <div class="row" id="thumbnails"></div>
+                <div class="col-12">
+                  <div class="row justify-content-center" id="thumbnails"></div>
                 </div>
-                <div class="col-lg-3 col-md-12">
+              </div>
+            </div>
+
+            <div class="container cenovnik hidden" id="cenovnik">
+              <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
                   <div class="container cp-10">
                     <div class="row"><div class="col-12">Fotografije</div></div>
                     <div class="row">
@@ -170,6 +177,7 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-lg-3"></div>
               </div>
             </div>
 
@@ -328,6 +336,11 @@
             // Enable delete all button and purchase button
             document.getElementById("obrisiSve").disabled = false;
             document.getElementById("kupovina").disabled = false;
+
+            // Show pricing
+            const cenovnik = document.getElementById("cenovnik");
+            cenovnik.classList.remove("hidden");
+
             // CHECK ASPECT RATIO AND ADJUST ORIENTATION
             const nizSlika = document.getElementsByClassName("upload-image");
             for (let i = 0; i < nizSlika.length; i++) {
@@ -351,6 +364,8 @@
             // Disable delete all button
             document.getElementById("obrisiSve").disabled = true;
             document.getElementById("kupovina").disabled = true;
+            const cenovnik = document.getElementById("cenovnik");
+            cenovnik.classList.add("hidden");
           }
           kalkulacija();
         });
@@ -415,7 +430,7 @@
             function() {
               // GENERATE IMAGE ELEMENT
               const mainDiv = document.createElement("div");
-              mainDiv.setAttribute("class", "col-lg-4 col-md-6 thumbs");
+              mainDiv.setAttribute("class", "col-lg-3 col-md-6 thumbs");
               const imgDiv = document.createElement("div");
               imgDiv.setAttribute("class", "img-div");
               const deleteButton = document.createElement("button");

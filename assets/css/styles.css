@@ -21879,6 +21879,7 @@ section {
 }
 
 .img-div {
+  position: relative;
   min-width: 200px;
   min-height: 300px;
   max-width: 200px;
@@ -21907,7 +21908,7 @@ section {
 }
 
 .thumbs .nice-select {
-  min-width: 80px;
+  min-width: 75px;
   padding-left: 10px;
   font-size: 13px;
   padding-right: 10px;
@@ -21985,6 +21986,21 @@ section {
 
 .cenovnik {
   padding-top: 100px;
+}
+
+.deleteImg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: none;
+
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.progress {
+  min-width: 200px;
+  max-width: 200px;
 }
 
 input[type="number"] {

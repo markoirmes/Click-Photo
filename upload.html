@@ -280,6 +280,87 @@
         console.log(data);
       }
 
+      function checkQuality() {
+        const progress = document.getElementsByClassName("thumbs");
+        let dpi = 0;
+        const danger = 0.6;
+        const size = [1000, 1200, 1500, 1800, 2400, 3000];
+
+        for (let i = 0; i < progress.length; i++) {
+          const width = progress[i].querySelector(".upload-image").naturalWidth;
+          const height = progress[i].querySelector(".upload-image").naturalHeight;
+          const progressLine = progress[i].querySelector(".progress-bar");
+          const dimension = progress[i].querySelector("select.sizeSelect").value;
+          if (dimension == "9x13") {
+            if (width < size[0] * danger || height < size[0] * danger) {
+              progressLine.className = "progress-bar bg-danger";
+              progressLine.style = "width:50%;";
+            } else if (width < size[0] || height < size[0]) {
+              progressLine.className = "progress-bar bg-warning";
+              progressLine.style = "width:75%;";
+            } else {
+              progressLine.className = "progress-bar bg-success";
+              progressLine.style = "width:100%;";
+            }
+          } else if (dimension == "10x15") {
+            if (width < size[1] * danger || height < size[1] * danger) {
+              progressLine.className = "progress-bar bg-danger";
+              progressLine.style = "width:50%;";
+            } else if (width < size[1] || height < size[1]) {
+              progressLine.className = "progress-bar bg-warning";
+              progressLine.style = "width:75%;";
+            } else {
+              progressLine.className = "progress-bar bg-success";
+              progressLine.style = "width:100%;";
+            }
+          } else if (dimension == "13x18") {
+            if (width < size[2] * danger || height < size[2] * danger) {
+              progressLine.className = "progress-bar bg-danger";
+              progressLine.style = "width:50%;";
+            } else if (width < size[2] || height < size[2]) {
+              progressLine.className = "progress-bar bg-warning";
+              progressLine.style = "width:75%;";
+            } else {
+              progressLine.className = "progress-bar bg-success";
+              progressLine.style = "width:100%;";
+            }
+          } else if (dimension == "15x21") {
+            if (width < size[3] * danger || height < size[3] * danger) {
+              progressLine.className = "progress-bar bg-danger";
+              progressLine.style = "width:50%;";
+            } else if (width < size[3] || height < size[3]) {
+              progressLine.className = "progress-bar bg-warning";
+              progressLine.style = "width:75%;";
+            } else {
+              progressLine.className = "progress-bar bg-success";
+              progressLine.style = "width:100%;";
+            }
+          } else if (dimension == "20x30") {
+            if (width < size[4] * danger || height < size[4] * danger) {
+              progressLine.className = "progress-bar bg-danger";
+              progressLine.style = "width:50%;";
+            } else if (width < size[4] || height < size[4]) {
+              progressLine.className = "progress-bar bg-warning";
+              progressLine.style = "width:75%;";
+            } else {
+              progressLine.className = "progress-bar bg-success";
+              progressLine.style = "width:100%;";
+            }
+          } else if (dimension == "25x38") {
+            if (width < size[5] * danger || height < size[5] * danger) {
+              progressLine.className = "progress-bar bg-danger";
+              progressLine.style = "width:50%;";
+            } else if (width < size[5] || height < size[5]) {
+              progressLine.className = "progress-bar bg-warning";
+              progressLine.style = "width:75%;";
+            } else {
+              progressLine.className = "progress-bar bg-success";
+              progressLine.style = "width:100%;";
+            }
+          }
+        }
+      }
+
       // kalkulacija
 
       function cenaPoDimenziji(size) {
@@ -350,7 +431,7 @@
             }
 
             // DELETE BUTTON FUNCTION
-            const deleteButton = document.getElementsByClassName("deleteImg");
+            const deleteButton = document.getElementsByClassName("img-div");
             for (let i = 0; i < deleteButton.length; i++) {
               deleteButton[i].addEventListener(
                 "click",
@@ -367,7 +448,12 @@
             const cenovnik = document.getElementById("cenovnik");
             cenovnik.classList.add("hidden");
           }
+
+          // Calculate
           kalkulacija();
+
+          //CHECK QUALITY
+          checkQuality();
         });
       });
 
@@ -421,6 +507,8 @@
             return alert(file.name + " nije odgovarajuci fajl.");
           } else if (file.size > 5242880) {
             return alert("Slika " + file.name + " prevazilazi 5MB!");
+          } else if (file.naturalHeight < 1000 || file.naturalWidth < 1000) {
+            return alert("Minimalna dimenzija slike je 1000x1000");
           }
 
           const reader = new FileReader();
@@ -435,12 +523,13 @@
               imgDiv.setAttribute("class", "img-div");
               const deleteButton = document.createElement("button");
               deleteButton.setAttribute("class", "deleteImg");
-              deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+              deleteButton.innerHTML = '<i class="fas fa-times"></i>';
 
               // select dimension
               const selectFieldSize = document.createElement("select");
               selectFieldSize.setAttribute("class", "sizeSelect");
               selectFieldSize.addEventListener("change", kalkulacija);
+              selectFieldSize.addEventListener("change", checkQuality);
               const size1 = document.createElement("option");
               size1.text = "9x13";
               size1.value = "9x13";
@@ -488,6 +577,12 @@
               qtyInput.addEventListener("change", kalkulacija);
               qtyInput.value = document.getElementById("kolicina").value;
 
+              const progressBarContainer = document.createElement("div");
+              progressBarContainer.setAttribute("class", "progress");
+              const progressBar = document.createElement("div");
+              progressBar.setAttribute("class", "progress-bar");
+              progressBarContainer.appendChild(progressBar);
+
               const image = new Image();
               image.setAttribute("class", "upload-image");
               image.title = file.name;
@@ -495,18 +590,20 @@
               preview.appendChild(mainDiv);
               mainDiv.appendChild(imgDiv);
               imgDiv.append(image);
+              imgDiv.appendChild(deleteButton);
               mainDiv.appendChild(selectFieldSize);
               mainDiv.appendChild(selectFieldPaper);
               mainDiv.appendChild(qtyInput);
-              mainDiv.appendChild(deleteButton);
+              mainDiv.appendChild(progressBarContainer);
               $("select").niceSelect();
 
               Array.prototype.slice.call(mainDiv.querySelectorAll(".nice-select li.option")).forEach(function(li) {
                 li.addEventListener("click", function() {
                   setTimeout(kalkulacija, 0);
+                  setTimeout(checkQuality, 0);
                 });
               });
-
+              checkQuality();
               kalkulacija();
             },
             false

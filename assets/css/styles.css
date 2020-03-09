@@ -21883,7 +21883,7 @@ section {
   min-width: 200px;
   min-height: 300px;
   max-width: 200px;
-  max-height: 3020x;
+  max-height: 300px;
   margin-bottom: 5px;
   background: white;
   display: flex;
@@ -21999,7 +21999,9 @@ section {
 }
 
 .progress {
-  min-width: 200px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  margin-top: 15px;
   max-width: 200px;
 }
 
@@ -22043,6 +22045,14 @@ input[type="number"]::-webkit-outer-spin-button {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
+
+  #thumbnails .col-lg-3.col-md-6 {
+    max-width: 300px;
+  }
+
+  .container .cenovnik {
+    max-width: 300px;
+  }
 }
 
 @media only screen and (max-width: 468px) {
@@ -22063,5 +22073,20 @@ input[type="number"]::-webkit-outer-spin-button {
   .row {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #thumbnails .col-lg-3.col-md-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 343px) {
+  #thumbnails .col-lg-3,
+  #thumbnails .col-md-6 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

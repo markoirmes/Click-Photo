@@ -431,12 +431,12 @@
             }
 
             // DELETE BUTTON FUNCTION
-            const deleteButton = document.getElementsByClassName("img-div");
-            for (let i = 0; i < deleteButton.length; i++) {
-              deleteButton[i].addEventListener(
+            const deleteButtonList = document.getElementsByClassName("deleteImg");
+            for (let i = 0; i < deleteButtonList.length; i++) {
+              deleteButtonList[i].addEventListener(
                 "click",
                 function(e) {
-                  e.currentTarget.parentNode.remove();
+                  e.currentTarget.parentNode.parentNode.parentNode.remove();
                 },
                 false
               );
@@ -506,7 +506,7 @@
           if (!/\.(jpeg|jpg|png)$/i.test(file.name)) {
             return alert(file.name + " nije odgovarajuci fajl.");
           } else if (file.size > 5242880) {
-            return alert("Slika " + file.name + " prevazilazi 5MB!");
+            return alert("Slika " + file.name + " je veća od 5MB!");
           } else if (file.naturalHeight < 1000 || file.naturalWidth < 1000) {
             return alert("Minimalna dimenzija slike je 1000x1000");
           }
@@ -518,12 +518,19 @@
             function() {
               // GENERATE IMAGE ELEMENT
               const mainDiv = document.createElement("div");
-              mainDiv.setAttribute("class", "col-lg-3 col-md-6 thumbs");
+              mainDiv.setAttribute("class", "col-lg-4 col-md-6 thumbs");
               const imgDiv = document.createElement("div");
               imgDiv.setAttribute("class", "img-div");
+              const imgDetails = document.createElement("div");
+              imgDetails.setAttribute("class", "imgDetails");
+              const imgSelect = document.createElement("div");
+              imgSelect.setAttribute("class", "imgSelect");
               const deleteButton = document.createElement("button");
               deleteButton.setAttribute("class", "deleteImg");
-              deleteButton.innerHTML = '<i class="fas fa-times"></i>';
+              deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+              const imageName = document.createElement("p");
+              imageName.setAttribute("class", "imgName");
+              imageName.textContent = file.name;
 
               // select dimension
               const selectFieldSize = document.createElement("select");
@@ -576,25 +583,26 @@
               qtyInput.setAttribute("max", "500");
               qtyInput.addEventListener("change", kalkulacija);
               qtyInput.value = document.getElementById("kolicina").value;
-
               const progressBarContainer = document.createElement("div");
               progressBarContainer.setAttribute("class", "progress");
               const progressBar = document.createElement("div");
               progressBar.setAttribute("class", "progress-bar");
               progressBarContainer.appendChild(progressBar);
-
               const image = new Image();
               image.setAttribute("class", "upload-image");
               image.title = file.name;
               image.src = this.result;
               preview.appendChild(mainDiv);
               mainDiv.appendChild(imgDiv);
+              mainDiv.appendChild(imgDetails);
               imgDiv.append(image);
-              imgDiv.appendChild(deleteButton);
-              mainDiv.appendChild(selectFieldSize);
-              mainDiv.appendChild(selectFieldPaper);
-              mainDiv.appendChild(qtyInput);
-              mainDiv.appendChild(progressBarContainer);
+              imgDetails.appendChild(imageName);
+              imgDetails.appendChild(imgSelect);
+              imgSelect.appendChild(selectFieldSize);
+              imgSelect.appendChild(selectFieldPaper);
+              imgSelect.appendChild(qtyInput);
+              imgSelect.appendChild(deleteButton);
+              imgDetails.appendChild(progressBarContainer);
               $("select").niceSelect();
 
               Array.prototype.slice.call(mainDiv.querySelectorAll(".nice-select li.option")).forEach(function(li) {

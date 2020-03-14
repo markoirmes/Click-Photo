@@ -501,6 +501,8 @@
           [].forEach.call(this.files, readAndPreview);
         }
 
+        document.querySelector("#files").value = null;
+
         function readAndPreview(file) {
           // Check file name and file size
           if (!/\.(jpeg|jpg|png)$/i.test(file.name)) {

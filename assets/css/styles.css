@@ -22239,6 +22239,10 @@ input[type="number"] {
 
 .bigIcon svg {
   font-size: 50px;
+  color: #5dc5bf;
+  padding: 50px;
+  border-radius: 500px;
+  border: 2px solid #5dc5bf;
 }
 
 input[type="number"]::-webkit-inner-spin-button,

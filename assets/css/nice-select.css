@@ -16,7 +16,7 @@
   padding-left: 18px;
   padding-right: 30px;
   position: relative;
-  text-align: left !important;
+  text-align: center;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -webkit-user-select: none;
@@ -24,8 +24,9 @@
   -ms-user-select: none;
   user-select: none;
   white-space: nowrap;
-  width: auto;
+  width: 150px;
   min-width: 100px;
+  margin-bottom: 20px;
 }
 .nice-select:hover {
   border-color: #dbdbdb;
@@ -67,6 +68,8 @@
   -webkit-transform: scale(1) translateY(0);
   -ms-transform: scale(1) translateY(0);
   transform: scale(1) translateY(0);
+  width: 150px;
+  text-align: center;
 }
 .nice-select.disabled {
   border-color: #ededed;
@@ -125,6 +128,8 @@
   -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
   transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
   z-index: 9;
+  width: 150px;
+  text-align: center;
 }
 .nice-select .list:hover .option:not(:hover) {
   background-color: transparent !important;
@@ -138,7 +143,7 @@
   outline: none;
   padding-left: 18px;
   padding-right: 29px;
-  text-align: left;
+  text-align: center;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   color: #687281;

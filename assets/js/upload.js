@@ -265,7 +265,7 @@ function previewImages() {
       function() {
         // GENERATE IMAGE ELEMENT
         const mainDiv = document.createElement("div");
-        mainDiv.setAttribute("class", "col-lg-4 col-md-6 thumbs");
+        mainDiv.setAttribute("class", "col-lg-4 col-md-6 thumbs lift");
         const imgDiv = document.createElement("div");
         imgDiv.setAttribute("class", "img-div");
         const imgDetails = document.createElement("div");

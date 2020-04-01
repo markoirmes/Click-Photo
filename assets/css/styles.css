@@ -22089,13 +22089,19 @@ section {
   max-height: 259px !important;
 }
 
-.col-lg-4.col-md-6.thumbs {
+ .col-lg-4.col-md-6.thumbs {
   margin: 32px auto;
-  max-width: 300px;
-  border-radius: 10px;
+  max-width: 300px; 
   background-color: white;
-  box-shadow: 0rem 0rem 1.5rem 0rem rgba(0, 0, 0, 0.5) !important;
+  border-radius: 0.35rem; 
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 45, 65, 0.15);  
   padding: 20px;
+ /* border-top: solid 0.25rem #1f2d41; */
+
+} 
+
+.col-lg-4.col-md-6.thumbs:hover {
+  box-shadow: 0 0.5rem 2rem 0 rgba(31, 45, 65, 0.25);
 }
 
 .thumbs .nice-select {

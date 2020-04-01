@@ -20923,13 +20923,13 @@ i-feather svg {
 }
 
 .icon-stack-xl {
-  height: 5rem;
-  width: 5rem;
-  font-size: 1.75rem;
+  height: 8rem;
+  width: 8rem;
+  font-size: 3rem;
 }
 .icon-stack-xl svg {
-  height: 1.75rem;
-  width: 1.75rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 .icon-list-social {
@@ -22237,6 +22237,9 @@ input[type="number"] {
   text-align: center;
 }
 
+.bigIcon .fa-stack {
+  color: #5dc5bf !important;
+}
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
